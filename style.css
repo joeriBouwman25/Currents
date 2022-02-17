@@ -1,0 +1,1782 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  /* background-image: url("https://i.pinimg.com/originals/55/ec/db/55ecdb15b50a98a19299f99b53a90534.jpg");
+  background-position: center;
+  background-repeat: no-repeat; */
+}
+
+div {
+  height: 10vh;
+  /* border-right: 1px solid #fff;
+  border-left: 1px solid #000; */
+  z-index: 2;
+  /* background-color: indigo; */
+}
+
+body > header:first-of-type {
+  --positionX: 5;
+  --positionY: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body > header:first-of-type h1 {
+  position: absolute;
+  top: calc(var(--positionY) * 10%);
+  left: calc(var(--positionX) * 10%);
+  background: radial-gradient(circle at 100px 100px, #b3b3b3, #000);
+  padding: 4.5em 1.45em;
+  border-radius: 50%;
+  z-index: 1;
+  transition: 0.5s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(0.8em, 1.3em, 4.5em);
+  transform-style: preserve-3d;
+  animation: nasaOrbit 60s infinite linear paused;
+}
+body > header:first-of-type h1 span {
+  /* position: absolute; */
+  display: block;
+  text-shadow: 0 0.0625em 0.125em #00000088;
+  animation: currents 6s infinite linear;
+}
+
+@keyframes nasaOrbit {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes currents {
+  0% {
+    transform: perspective(calc(5 / 2.5 * 1em)) translateZ(calc(5 * -1em))
+      rotateY(0) translateZ(calc(5 * 1em));
+  }
+  100% {
+    transform: perspective(calc(5 / 2.5 * 1em)) translateZ(calc(5 * -1em))
+      rotateY(-1turn) translateZ(calc(5 * 1em));
+  }
+}
+
+main {
+  position: absolute;
+  background-image: linear-gradient(#ff2343, #f5b32d);
+}
+
+section :not(:first-of-type) {
+  display: none;
+}
+/* divsssss */
+
+div:nth-child(1):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(2):hover ~ header:first-of-type h1 {
+  --positionX: 1;
+  --positionY: 0;
+}
+
+div:nth-child(3):hover ~ header:first-of-type h1 {
+  --positionX: 2;
+  --positionY: 0;
+}
+
+div:nth-child(4):hover ~ header:first-of-type h1 {
+  --positionX: 3;
+  --positionY: 0;
+}
+
+div:nth-child(5):hover ~ header:first-of-type h1 {
+  --positionX: 4;
+  --positionY: 0;
+}
+
+div:nth-child(6):hover ~ header:first-of-type h1 {
+  --positionX: 5;
+  --positionY: 0;
+}
+
+div:nth-child(7):hover ~ header:first-of-type h1 {
+  --positionX: 6;
+  --positionY: 0;
+}
+
+div:nth-child(8):hover ~ header:first-of-type h1 {
+  --positionX: 7;
+  --positionY: 0;
+}
+
+div:nth-child(9):hover ~ header:first-of-type h1 {
+  --positionX: 8;
+  --positionY: 0;
+}
+
+div:nth-child(10):hover ~ header:first-of-type h1 {
+  --positionX: 9;
+  --positionY: 0;
+}
+
+div:nth-child(11):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 1;
+}
+
+div:nth-child(12):hover ~ header:first-of-type h1 {
+  --positionX: 1;
+  --positionY: 1;
+}
+
+div:nth-child(13):hover ~ header:first-of-type h1 {
+  --positionX: 2;
+  --positionY: 1;
+}
+
+div:nth-child(14):hover ~ header:first-of-type h1 {
+  --positionX: 3;
+  --positionY: 1;
+}
+
+div:nth-child(15):hover ~ header:first-of-type h1 {
+  --positionX: 4;
+  --positionY: 1;
+}
+
+div:nth-child(16):hover ~ header:first-of-type h1 {
+  --positionX: 5;
+  --positionY: 1;
+}
+
+div:nth-child(17):hover ~ header:first-of-type h1 {
+  --positionX: 6;
+  --positionY: 1;
+}
+
+div:nth-child(18):hover ~ header:first-of-type h1 {
+  --positionX: 7;
+  --positionY: 1;
+}
+
+div:nth-child(19):hover ~ header:first-of-type h1 {
+  --positionX: 8;
+  --positionY: 1;
+}
+
+div:nth-child(20):hover ~ header:first-of-type h1 {
+  --positionX: 9;
+  --positionY: 1;
+}
+
+div:nth-child(21):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 2;
+}
+
+div:nth-child(22):hover ~ header:first-of-type h1 {
+  --positionX: 1;
+  --positionY: 2;
+}
+
+div:nth-child(23):hover ~ header:first-of-type h1 {
+  --positionX: 2;
+  --positionY: 2;
+}
+
+div:nth-child(24):hover ~ header:first-of-type h1 {
+  --positionX: 3;
+  --positionY: 2;
+}
+
+div:nth-child(25):hover ~ header:first-of-type h1 {
+  --positionX: 4;
+  --positionY: 2;
+}
+
+div:nth-child(26):hover ~ header:first-of-type h1 {
+  --positionX: 5;
+  --positionY: 2;
+}
+
+div:nth-child(27):hover ~ header:first-of-type h1 {
+  --positionX: 6;
+  --positionY: 2;
+}
+
+div:nth-child(28):hover ~ header:first-of-type h1 {
+  --positionX: 7;
+  --positionY: 2;
+}
+
+div:nth-child(29):hover ~ header:first-of-type h1 {
+  --positionX: 8;
+  --positionY: 2;
+}
+
+div:nth-child(30):hover ~ header:first-of-type h1 {
+  --positionX: 9;
+  --positionY: 2;
+}
+
+div:nth-child(31):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 3;
+}
+
+div:nth-child(32):hover ~ header:first-of-type h1 {
+  --positionX: 1;
+  --positionY: 3;
+}
+
+div:nth-child(33):hover ~ header:first-of-type h1 {
+  --positionX: 2;
+  --positionY: 3;
+}
+
+div:nth-child(34):hover ~ header:first-of-type h1 {
+  --positionX: 3;
+  --positionY: 3;
+}
+
+div:nth-child(35):hover ~ header:first-of-type h1 {
+  --positionX: 4;
+  --positionY: 3;
+}
+
+div:nth-child(36):hover ~ header:first-of-type h1 {
+  --positionX: 5;
+  --positionY: 3;
+}
+
+div:nth-child(37):hover ~ header:first-of-type h1 {
+  --positionX: 6;
+  --positionY: 3;
+}
+
+div:nth-child(38):hover ~ header:first-of-type h1 {
+  --positionX: 7;
+  --positionY: 3;
+}
+
+div:nth-child(39):hover ~ header:first-of-type h1 {
+  --positionX: 8;
+  --positionY: 3;
+}
+
+div:nth-child(40):hover ~ header:first-of-type h1 {
+  --positionX: 9;
+  --positionY: 3;
+}
+
+div:nth-child(41):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 4;
+}
+
+div:nth-child(42):hover ~ header:first-of-type h1 {
+  --positionX: 1;
+  --positionY: 4;
+}
+
+div:nth-child(43):hover ~ header:first-of-type h1 {
+  --positionX: 2;
+  --positionY: 4;
+}
+
+div:nth-child(44):hover ~ header:first-of-type h1 {
+  --positionX: 3;
+  --positionY: 4;
+}
+
+div:nth-child(45):hover ~ header:first-of-type h1 {
+  --positionX: 4;
+  --positionY: 4;
+}
+
+div:nth-child(46):hover ~ header:first-of-type h1 {
+  --positionX: 5;
+  --positionY: 4;
+}
+
+div:nth-child(47):hover ~ header:first-of-type h1 {
+  --positionX: 6;
+  --positionY: 4;
+}
+
+div:nth-child(48):hover ~ header:first-of-type h1 {
+  --positionX: 7;
+  --positionY: 4;
+}
+
+div:nth-child(49):hover ~ header:first-of-type h1 {
+  --positionX: 8;
+  --positionY: 4;
+}
+
+div:nth-child(50):hover ~ header:first-of-type h1 {
+  --positionX: 9;
+  --positionY: 4;
+}
+
+div:nth-child(51):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 5;
+}
+
+div:nth-child(52):hover ~ header:first-of-type h1 {
+  --positionX: 1;
+  --positionY: 5;
+}
+
+div:nth-child(53):hover ~ header:first-of-type h1 {
+  --positionX: 2;
+  --positionY: 5;
+}
+
+div:nth-child(54):hover ~ header:first-of-type h1 {
+  --positionX: 3;
+  --positionY: 5;
+}
+
+div:nth-child(55):hover ~ header:first-of-type h1 {
+  --positionX: 4;
+  --positionY: 5;
+}
+
+div:nth-child(56):hover ~ header:first-of-type h1 {
+  --positionX: 5;
+  --positionY: 5;
+}
+
+div:nth-child(57):hover ~ header:first-of-type h1 {
+  --positionX: 6;
+  --positionY: 5;
+}
+
+div:nth-child(58):hover ~ header:first-of-type h1 {
+  --positionX: 7;
+  --positionY: 5;
+}
+
+div:nth-child(59):hover ~ header:first-of-type h1 {
+  --positionX: 8;
+  --positionY: 5;
+}
+
+div:nth-child(60):hover ~ header:first-of-type h1 {
+  --positionX: 9;
+  --positionY: 5;
+}
+
+div:nth-child(61):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 6;
+}
+
+div:nth-child(62):hover ~ header:first-of-type h1 {
+  --positionX: 1;
+  --positionY: 6;
+}
+
+div:nth-child(63):hover ~ header:first-of-type h1 {
+  --positionX: 2;
+  --positionY: 6;
+}
+
+div:nth-child(64):hover ~ header:first-of-type h1 {
+  --positionX: 3;
+  --positionY: 6;
+}
+
+div:nth-child(65):hover ~ header:first-of-type h1 {
+  --positionX: 4;
+  --positionY: 6;
+}
+
+div:nth-child(66):hover ~ header:first-of-type h1 {
+  --positionX: 5;
+  --positionY: 6;
+}
+
+div:nth-child(67):hover ~ header:first-of-type h1 {
+  --positionX: 6;
+  --positionY: 6;
+}
+
+div:nth-child(68):hover ~ header:first-of-type h1 {
+  --positionX: 7;
+  --positionY: 6;
+}
+
+div:nth-child(69):hover ~ header:first-of-type h1 {
+  --positionX: 8;
+  --positionY: 6;
+}
+
+div:nth-child(70):hover ~ header:first-of-type h1 {
+  --positionX: 9;
+  --positionY: 6;
+}
+
+div:nth-child(71):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 7;
+}
+
+div:nth-child(72):hover ~ header:first-of-type h1 {
+  --positionX: 1;
+  --positionY: 7;
+}
+
+div:nth-child(73):hover ~ header:first-of-type h1 {
+  --positionX: 2;
+  --positionY: 7;
+}
+
+div:nth-child(74):hover ~ header:first-of-type h1 {
+  --positionX: 3;
+  --positionY: 7;
+}
+
+div:nth-child(75):hover ~ header:first-of-type h1 {
+  --positionX: 4;
+  --positionY: 7;
+}
+
+div:nth-child(76):hover ~ header:first-of-type h1 {
+  --positionX: 5;
+  --positionY: 7;
+}
+
+div:nth-child(77):hover ~ header:first-of-type h1 {
+  --positionX: 6;
+  --positionY: 7;
+}
+
+div:nth-child(78):hover ~ header:first-of-type h1 {
+  --positionX: 7;
+  --positionY: 7;
+}
+
+div:nth-child(79):hover ~ header:first-of-type h1 {
+  --positionX: 8;
+  --positionY: 7;
+}
+
+div:nth-child(80):hover ~ header:first-of-type h1 {
+  --positionX: 9;
+  --positionY: 7;
+}
+
+div:nth-child(81):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 8;
+}
+
+div:nth-child(82):hover ~ header:first-of-type h1 {
+  --positionX: 1;
+  --positionY: 8;
+}
+
+div:nth-child(83):hover ~ header:first-of-type h1 {
+  --positionX: 2;
+  --positionY: 8;
+}
+
+div:nth-child(84):hover ~ header:first-of-type h1 {
+  --positionX: 3;
+  --positionY: 8;
+}
+
+div:nth-child(85):hover ~ header:first-of-type h1 {
+  --positionX: 4;
+  --positionY: 8;
+}
+
+div:nth-child(86):hover ~ header:first-of-type h1 {
+  --positionX: 5;
+  --positionY: 8;
+}
+
+div:nth-child(87):hover ~ header:first-of-type h1 {
+  --positionX: 6;
+  --positionY: 8;
+}
+
+div:nth-child(88):hover ~ header:first-of-type h1 {
+  --positionX: 7;
+  --positionY: 8;
+}
+
+div:nth-child(89):hover ~ header:first-of-type h1 {
+  --positionX: 8;
+  --positionY: 8;
+}
+
+div:nth-child(90):hover ~ header:first-of-type h1 {
+  --positionX: 9;
+  --positionY: 8;
+}
+
+div:nth-child(91):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 9;
+}
+
+div:nth-child(92):hover ~ header:first-of-type h1 {
+  --positionX: 1;
+  --positionY: 9;
+}
+
+div:nth-child(93):hover ~ header:first-of-type h1 {
+  --positionX: 2;
+  --positionY: 9;
+}
+
+div:nth-child(94):hover ~ header:first-of-type h1 {
+  --positionX: 3;
+  --positionY: 9;
+}
+
+div:nth-child(95):hover ~ header:first-of-type h1 {
+  --positionX: 4;
+  --positionY: 9;
+}
+
+div:nth-child(96):hover ~ header:first-of-type h1 {
+  --positionX: 5;
+  --positionY: 9;
+}
+
+div:nth-child(97):hover ~ header:first-of-type h1 {
+  --positionX: 6;
+  --positionY: 9;
+}
+
+div:nth-child(98):hover ~ header:first-of-type h1 {
+  --positionX: 7;
+  --positionY: 9;
+}
+
+div:nth-child(99):hover ~ header:first-of-type h1 {
+  --positionX: 8;
+  --positionY: 9;
+}
+
+div:nth-child(100):hover ~ header:first-of-type h1 {
+  --positionX: 9;
+  --positionY: 9;
+}
+
+div:nth-child(101):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 10;
+}
+
+div:nth-child(102):hover ~ header:first-of-type h1 {
+  --positionX: 1;
+  --positionY: 0;
+}
+
+div:nth-child(103):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(104):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(105):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(106):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(107):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(108):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(109):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(110):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(111):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(112):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(113):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(114):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(115):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(116):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(117):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(118):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(119):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(120):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(121):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(122):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(123):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(124):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(125):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(126):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(127):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(128):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(129):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(130):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(131):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(132):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(133):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(134):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(135):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(136):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(137):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(138):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(139):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(140):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(141):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(142):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(143):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(144):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(145):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(146):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(147):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(148):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(149):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(150):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(151):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(152):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(153):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(154):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(155):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(156):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(157):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(158):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(159):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(160):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(161):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(162):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(163):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(164):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(165):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(166):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(167):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(168):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(169):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(170):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(171):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(172):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(173):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(174):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(175):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(176):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(177):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(178):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(179):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(180):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(181):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(182):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(183):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(184):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(185):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(186):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(187):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(188):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(189):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(190):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(191):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(192):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(193):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(194):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(195):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(196):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(197):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(198):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(199):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(200):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(201):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(202):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(203):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(204):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(205):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(206):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(207):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(208):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(209):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(210):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(211):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(212):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(213):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(214):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(215):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(216):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(217):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(218):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(219):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(220):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(221):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(222):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(223):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(224):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(225):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(226):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(227):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(228):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(229):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(230):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(231):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(232):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(233):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(234):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(235):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(236):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(237):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(238):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(239):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(240):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(241):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(242):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(243):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(244):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(245):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(246):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(247):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(248):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(249):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(250):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(251):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(252):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(253):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(254):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(255):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(256):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(257):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(258):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(259):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(260):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(261):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(262):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(263):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(264):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(265):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(266):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(267):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(268):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(269):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(270):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(271):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(272):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(273):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(274):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(275):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(276):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(277):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(278):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(279):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(280):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(281):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(282):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(283):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(284):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(285):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(286):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(287):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(288):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(289):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(290):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(291):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(292):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(293):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(294):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(295):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(296):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(297):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(298):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(299):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(300):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(301):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(302):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(303):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(304):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(305):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(306):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(307):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(308):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(309):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(310):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(311):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(312):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(313):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(314):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(315):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(316):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(317):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(318):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(319):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(320):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(321):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(322):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(323):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(324):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(325):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(326):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(327):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(328):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(329):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(330):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(331):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(332):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(333):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(334):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(335):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(336):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(337):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(338):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(339):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
+
+div:nth-child(340):hover ~ header:first-of-type h1 {
+  --positionX: 0;
+  --positionY: 0;
+}
