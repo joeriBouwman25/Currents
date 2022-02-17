@@ -3,31 +3,25 @@
   box-sizing: border-box;
 }
 
-body {
+body > section:first-of-type {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  /* background-image: url("https://i.pinimg.com/originals/55/ec/db/55ecdb15b50a98a19299f99b53a90534.jpg");
-  background-position: center;
-  background-repeat: no-repeat; */
+  position: absolute;
+  width: 100%;
 }
 
 div {
   height: 10vh;
-  /* border-right: 1px solid #fff;
-  border-left: 1px solid #000; */
   z-index: 2;
   /* background-color: indigo; */
 }
 
-body > header:first-of-type {
+section > header:first-of-type {
   --positionX: 5;
   --positionY: 5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-body > header:first-of-type h1 {
+section > header:first-of-type h1 {
   position: absolute;
   top: calc(var(--positionY) * 10%);
   left: calc(var(--positionX) * 10%);
@@ -42,13 +36,24 @@ body > header:first-of-type h1 {
   align-items: center;
   font-size: clamp(0.8em, 1.3em, 4.5em);
   transform-style: preserve-3d;
-  animation: nasaOrbit 60s infinite linear paused;
+  animation: nasaOrbit 60s infinite linear;
 }
+
 body > header:first-of-type h1 span {
   /* position: absolute; */
   display: block;
   text-shadow: 0 0.0625em 0.125em #00000088;
   animation: currents 6s infinite linear;
+}
+
+body > header:first-of-type p {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  z-index: 2;
+  color: #d7bb41;
+  /* text-border: solid 1px black; */
+  font-size: 1.5em;
 }
 
 @keyframes nasaOrbit {
@@ -72,11 +77,17 @@ body > header:first-of-type h1 span {
 }
 
 main {
-  position: absolute;
   background-image: linear-gradient(#ff2343, #f5b32d);
+  width: 100%;
+  height: 100%;
 }
 
-section :not(:first-of-type) {
+section p {
+  max-width: 32em;
+  white-space: pre;
+}
+
+section:not(:first-of-type) {
   display: none;
 }
 /* divsssss */
