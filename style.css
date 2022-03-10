@@ -245,6 +245,27 @@ main section:nth-child(1) p:nth-last-of-type(4n) {
   }
 }
 
+/* main section:nth-child(3) {
+  transform-style: preserve-3d;
+  transition: 1s;
+} */
+
+main section:nth-child(2) p {
+  transition: 1s;
+}
+
+main section:nth-child(2) p:nth-of-type(even):hover {
+  transform: perspective(10em) rotate(-180deg);
+  transition: 1s;
+  color: #e72181;
+}
+
+main section:nth-child(2) p:nth-of-type(odd):hover {
+  transform: perspective(10em) rotatey(180deg);
+  transition: 1s;
+  color: #19b5c0;
+}
+
 main section:nth-child(3) {
   perspective: 150vmin;
   height: 50em;
@@ -282,6 +303,41 @@ main section:nth-child(3) div:hover {
   opacity: 1;
 }
 
+@keyframes crawl {
+  0% {
+    top: -10em;
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% {
+    top: 80em;
+    transform: rotateX(25deg) translateZ(30em);
+  }
+}
+
+main section:nth-child(4) p {
+  animation: changing 40s infinite linear;
+}
+
+main section:nth-child(4) p:nth-of-type(odd) {
+  color: #000;
+}
+
+main section:nth-child(4) p:nth-of-type(even) {
+  color: #8b5bb8;
+}
+
+@keyframes changing {
+  0% {
+    transform: scale(0) rotate(0);
+  }
+  50% {
+    transform: scale(1.1) rotate(360deg);
+  }
+  100% {
+    transform: scale(0.5) rotate(360deg);
+  }
+}
+
 main section:nth-child(6) {
   height: 100vh;
 }
@@ -305,17 +361,6 @@ main section:nth-child(7) {
 
 main section:nth-child(6):target ~ section:nth-child(7) {
   background-image: none;
-}
-
-@keyframes crawl {
-  0% {
-    top: -40em;
-    transform: rotateX(20deg) translateZ(0);
-  }
-  100% {
-    top: 80em;
-    transform: rotateX(25deg) translateZ(30em);
-  }
 }
 
 /* @keyframes timer {
@@ -369,6 +414,45 @@ label {
   z-index: 1000;
 }
 
+label span {
+  position: absolute;
+}
+
+label span:nth-child(1) {
+  transform: rotate(308deg);
+  position: absolute;
+  top: -1%;
+  left: -20%;
+}
+
+label span:nth-child(2) {
+  position: absolute;
+  top: -19%;
+  left: -5%;
+  transform: rotate(325deg);
+}
+
+label span:nth-child(3) {
+  position: absolute;
+  top: -31%;
+  left: 20%;
+  transform: rotate(339deg);
+}
+
+label span:nth-child(4) {
+  position: absolute;
+  top: -34%;
+  left: 46%;
+  transform: rotate(8deg);
+}
+
+label span:nth-child(5) {
+  transform: rotate(22deg);
+  position: absolute;
+  top: -27%;
+  left: 75%;
+}
+
 label > div {
   width: 3em;
   height: 3em;
@@ -392,19 +476,6 @@ label > div {
     );
 
   box-shadow: none;
-}
-
-label > div:after {
-  position: absolute;
-  bottom: 39%;
-  right: 50%;
-  transform: translate(50%);
-  border: solid 1px #d9a388;
-  width: 0.5em;
-  height: 0.5em;
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px #da5b33, inset 0 0 0 27px #da5b33;
-  content: "";
 }
 
 label > div:hover {
