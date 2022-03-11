@@ -1,4 +1,21 @@
-# Dynamic Currents Album 
+# Dynamic Currents Album
+
 ## a project for CSS to the Rescue @cmda-minor-web 2021 - 2022
 
-Voor het vak CSS to The rescue, ga ik me bezig houden met een zengarden opdracht, maar dan wel met mijn eigen draai aan de vereisten. Zo ga ik niet een menu kaart designen maar een muziek album.
+<img src="https://media.s-bol.com/NxEXrZq0KAq8/550x550.jpg" width=600>
+
+Currents is an client side project that works with only HTML and CSS, so no JavaScript is found in this project!
+
+## Author
+
+J. Bouwman: [joeriBouwman25](https://github.com/joeriBouwman25)
+
+## license
+
+Currents is released under terms of the MIT license.
+
+## Contact
+
+Feel free to ask questions or contact me!
+
+Joeri.bouwman@hva.nl
